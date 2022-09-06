@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: roboto;
+}
+html{
+    font-size: 62.5%;
+}
+h1{
+    color: rgb(1, 1, 39);
+    background-color: #b1d5f7;
+    font-size: 2.5rem;
+    /*width: 50%;*/
+    margin: auto;
+    text-align: center;
+}
+header{
+    text-align: center;
+    padding-top: 56px;
+    padding-bottom: 24px;
+}
+body{
+    background-image: url(../img/4952444_19684.jpg); 
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+.bgLightblue{
+    background-color: #b1d5f7;
+}
+
+.bgWhite{
+    background-color: white;
+}
+.dondeEncontrarnos{
+    width: 60%;
+    margin: 20px auto;
+    padding: 40px 20px;
+    border: white solid 1.5px;
+}
+.textCenter{
+    text-align: center;
+}
+.textLeft{
+    text-align: right;
+    padding: 6px;
+    margin: 6px;
+    border: solid white 1.5px;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 8px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    margin-left: 330px;
+}
+    /*nav ul li{
+        display: inline-block;
+    }*/
+        nav ul li a{
+        color: rgb(1, 1, 39);
+        text-decoration: none;
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.8rem;
+        padding: 5px 10px;
+        margin-left: 30px;
+        }
+        nav ul li a:hover{
+            color:rgb(80, 146, 245);
+            text-decoration: underline;
+        }
+main section p{
+    font-family: 'roboto';
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(80, 146, 245);
+}
+footer{
+    font-size: 1.5rem;
+    /*display: flex;
+    justify-content: space-between;
+    align-items: center;*/
+}
+.iconSizeSmall{
+    width: 30px;
+}
+.iconSizeMed{
+    width: 60px;
+}
+tr td{
+    background-color: rgb(80, 146, 245);
+    font-family: nunito;
+    border: white solid 1.5px;
+    padding: 15px;
+    text-align: center;
+    width: 150px;
+    font-size: 1.5rem;
+}
+tr td:hover{
+    font-size: 2rem;
+    color: white;
+    text-decoration: underline;
+}
+tr th{
+    background-color: rgb(0, 84, 209);
+    font-family: nunito;
+    border: white solid 1.5px;
+    padding: 15px;
+    text-align: center;
+    width: 150px;
+    font-size: 1.5rem;    
+}
+    tr th:hover{
+    font-size: 2rem;
+    color: white;
+    text-decoration: underline;
+}
+.nosotros{
+    width: 60%;
+    margin: 20px auto;
+    padding: 40px 20px;
+    /*border: white solid 1.5px;*/
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+form{
+    color: white;
+    font-size: 1.3rem;
+    margin-left: 10px;
+}
+h2{
+    color: white;
+    font-size: 1.7rem;
+    margin-left: 20px;
+}
+#products{
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: antiquewhite;
+    text-align: center;
+    padding: 15px 0;
+    font-family: Roboto, sans-serif;
+    margin: 25px 0;
+}
+    #products .gallery{
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+        #products .gallery figure{
+            text-align: center;
+        }
+            #products .gallery figure img{
+                border-radius: 4px;
+            }
+#footPage{
+    color: darkblue;
+    margin: 15px 1px;
+    text-align: center;
+}
+#footPage .socialNet{
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+    padding: 9px;
+    margin: 3px;
+}
+.conteiner{
+	display: grid;
+	grid-template-columns: 20% 70% 10%;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas: "nav nav nav" "header header header" ". main ." "footer footer footer"
+}
+#nav{
+	grid-area: nav;
+}
+#header{
+	grid-area: header;
+}
+#main{
+	grid-area: main;
+}
+#footer{
+	grid-area: footer;
+}
+.conteiner{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "footer";
+}
+#nav{
+	grid-area: nav;
+}
+#header{
+	grid-area: header;
+}
+#main{
+	grid-area: main;
+}
+#footer{
+	grid-area: footer;
+}
+#main{
+    display: flex;
+		flex-direction: column;
+		align-items: center;
+}
+@media (min-width: 768px){
+	.conteiner{
+		grid-template-columns: 3fr 7fr;
+		grid-template-areas: 
+		"nav nav" 
+		"header header" 
+		"main main" 
+		"footer footer";
+	}
+
+#nav{
+    flex-direction: row;
+		justify-content: space-between;
+}    
+#main{
+    display: flex;
+		flex-direction: column;
+		align-items: center;
+}
+}
+@media (min-width: 1024px){
+	.conteiner{
+		grid-template-columns: 3fr 7fr;
+		grid-template-areas: 
+		"nav nav nav" 
+		"header header header" 
+		"main main main" 
+		"footer footer footer";
+	}
+
+#nav{
+    flex-direction: row;
+		justify-content: space-between;
+}    
+#main{
+    display: flex;
+		flex-direction: row;
+		align-items: center;
+}
+}
